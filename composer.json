@@ -1,5 +1,5 @@
 {
-    "name": "lucassmacedo/omnipay-mercadopago",
+    "name": "crazynds/omnipay-mercadopago",
     "type": "library",
     "description": "MercadoPago gateway for OmniPay",
     "keywords": [
@@ -12,21 +12,29 @@
         "payment",
         "PHPeste"
     ],
-    "homepage": "https://github.com/lucassmacedo/omnipay-mercadopago",
+    "homepage": "https://github.com/crazynds/omnipay-mercadopago",
     "license": "MIT",
     "authors": [
         {
-            "name": "Lucas Macedo",
-            "email": "luuckymacedo@gmail.com"
+            "name": "Luiz Henrique",
+            "email": "lh.lagonds@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": { "Omnipay\\MercadoPago\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "^3.0"
+        "omnipay/common": "^3.2",
+        "mercadopago/dx-php": "3.0.0",
+        "symfony/http-client": "^7.0"
     },
     "require-dev": {
-        "omnipay/tests": "^3.0"
+        "omnipay/tests": "^4.1",
+        "http-interop/http-factory-guzzle": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
